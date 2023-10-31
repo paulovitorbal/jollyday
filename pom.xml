@@ -373,5 +373,28 @@
       </modules>
     </profile>
 
+    <profile>
+      <id>native</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.graalvm.buildtools</groupId>
+            <artifactId>native-maven-plugin</artifactId>
+            <version>0.10.1</version>
+            <extensions>true</extensions>
+            <executions>
+              <execution>
+                <id>test-native</id>
+                <goals>
+                  <goal>test</goal>
+                </goals>
+                <phase>test</phase>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
   </profiles>
 </project>
